@@ -1,0 +1,12 @@
+/* fragmentions */
+[fragmention] {
+    background: yellow;
+    animation: fragmention 3.5s both;
+}
+@keyframes fragmention {
+    to {
+        background:#ffffe0;
+    }
+}
+/* via tantek.com inspired by lea.verou.me/2012/12/animations-with-one-keyframe/ */
+/* https://indieweb.org/fragmention */

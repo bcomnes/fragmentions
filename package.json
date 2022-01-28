@@ -5,6 +5,7 @@
   "type": "module",
   "main": "./fragmention.js",
   "module": "./fragmention.js",
+  "style": "./fragmention.css",
   "exports": {
     "import": "./fragmention.js",
     "require": "./fragmention.js"
