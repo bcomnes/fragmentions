@@ -1,6 +1,6 @@
 {
   "name": "fragmentions",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Fragmentions are anchors to individual words or phrases in a document.",
   "type": "module",
   "main": "./fragmention.js",
@@ -9,12 +9,17 @@
     "import": "./fragmention.js",
     "require": "./fragmention.js"
   },
-  "author": "Jonathan Neal <jonathantneal@hotmail.com> (https://jonneal.dev)",
+  "author": "",
   "contributors": [
-     "Bret Comnes <bcomnes@gmail.com> (https://bret.io)"
+    "Bret Comnes <bcomnes@gmail.com> (https://bret.io)"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "git push --follow-tags && gh-release -y",
+    "test": "run-s test:*",
+    "test:deps": "dependency-check package.json --no-dev --no-peer",
+    "version": "run-s version:*",
+    "version:changelog": "auto-changelog -p --template keepachangelog auto-changelog --breaking-pattern 'BREAKING CHANGE:'",
+    "version:git": "git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -25,7 +30,6 @@
     "fragmentions",
     "indieweb"
   ],
-  "author": "",
   "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/bcomnes/fragmentions/issues"
@@ -37,14 +41,6 @@
     "dependency-check": "^4.1.0",
     "auto-changelog": "^2.0.0",
     "gh-release": "^6.0.0"
-  },
-  "scripts": {
-    "prepublishOnly": "git push --follow-tags && gh-release -y",
-    "test": "run-s test:*",
-    "test:deps": "dependency-check package.json --no-dev --no-peer",
-    "version": "run-s version:*",
-    "version:changelog": "auto-changelog -p --template keepachangelog auto-changelog --breaking-pattern 'BREAKING CHANGE:'",
-    "version:git": "git add CHANGELOG.md"
   },
   "files": [
     "fragmention.js",
