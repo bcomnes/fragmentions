@@ -1,0 +1,53 @@
+{
+  "name": "fragmentions",
+  "version": "0.0.0",
+  "description": "Fragmentions are anchors to individual words or phrases in a document.",
+  "type": "module",
+  "main": "./fragmention.js",
+  "module": "./fragmention.js",
+  "exports": {
+    "import": "./fragmention.js",
+    "require": "./fragmention.js"
+  },
+  "author": "Jonathan Neal <jonathantneal@hotmail.com> (https://jonneal.dev)",
+  "contributors": [
+     "Bret Comnes <bcomnes@gmail.com> (https://bret.io)"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcomnes/fragmentions.git"
+  },
+  "keywords": [
+    "fragmention",
+    "fragmentions",
+    "indieweb"
+  ],
+  "author": "",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/bcomnes/fragmentions/issues"
+  },
+  "homepage": "https://github.com/bcomnes/fragmentions#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "npm-run-all2": "^5.0.0",
+    "dependency-check": "^4.1.0",
+    "auto-changelog": "^2.0.0",
+    "gh-release": "^6.0.0"
+  },
+  "scripts": {
+    "prepublishOnly": "git push --follow-tags && gh-release -y",
+    "test": "run-s test:*",
+    "test:deps": "dependency-check package.json --no-dev --no-peer",
+    "version": "run-s version:*",
+    "version:changelog": "auto-changelog -p --template keepachangelog auto-changelog --breaking-pattern 'BREAKING CHANGE:'",
+    "version:git": "git add CHANGELOG.md"
+  },
+  "files": [
+    "fragmention.js",
+    "fragmention.min.js"
+  ]
+}

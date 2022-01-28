@@ -1,5 +1,17 @@
 # Fragmentions
 
+(A fork to publish to npm)
+
+## npm usage
+
+Install with `npm` then import.
+
+```js
+import('fragmentions')
+```
+
+## original readme
+
 Fragmentions are anchors to individual words or phrases in a document.
 
 ```html
