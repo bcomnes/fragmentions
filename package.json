@@ -45,6 +45,7 @@
   },
   "files": [
     "fragmention.js",
-    "fragmention.min.js"
+    "fragmention.min.js",
+    "fragmention.css"
   ]
 }
