@@ -1,12 +1,37 @@
-/* fragmentions */
-[fragmention] {
-    background: yellow;
-    animation: fragmention 3.5s both;
-}
-@keyframes fragmention {
-    to {
-        background:#ffffe0;
-    }
-}
 /* via tantek.com inspired by lea.verou.me/2012/12/animations-with-one-keyframe/ */
 /* https://indieweb.org/fragmention */
+
+
+:root {
+  --fragmention-light-start: hsla(60deg, 100%, 50%, 100%); /* #ff0 */
+  --fragmention-light-end: hsla(60deg, 100%, 50%, 20%); /* #ff0 */
+  --fragmention-dark-start: hsla(58deg, 66%, 30%, 100%); /* #7f7c1a */
+  --fragmention-dark-end: hsla(58deg, 66%, 30%, 20%); /* #7f7c1a */
+
+  --fragmention-start: var(--fragmention-light-start);
+  --fragmention-end: var(--fragmention-light-end);
+}
+
+/* fragmentions */
+[fragmention] {
+    background: var(--fragmention-start);
+    animation: fragmention 3.5s both;
+}
+
+@keyframes fragmention {
+    to {
+        background:var(--fragmention-end);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-mode) {
+    --fragmention-start: var(--fragmention-dark-start);
+    --fragmention-end: var(--fragmention-dark-end);
+   }
+}
+
+:root.dark-mode {
+  --fragmention-start: var(--fragmention-dark-start);
+  --fragmention-end: var(--fragmention-dark-end);
+}

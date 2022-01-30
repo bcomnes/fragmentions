@@ -36,12 +36,11 @@
     "url": "https://github.com/bcomnes/fragmentions/issues"
   },
   "homepage": "https://github.com/bcomnes/fragmentions#readme",
-  "dependencies": {},
   "devDependencies": {
-    "npm-run-all2": "^5.0.0",
-    "dependency-check": "^4.1.0",
     "auto-changelog": "^2.0.0",
-    "gh-release": "^6.0.0"
+    "dependency-check": "^4.1.0",
+    "gh-release": "^6.0.0",
+    "npm-run-all2": "^5.0.0"
   },
   "files": [
     "fragmention.js",
