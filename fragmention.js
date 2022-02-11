@@ -66,7 +66,7 @@ if (!('fragmention' in window.location)) (function () {
 			// if element found
 			if (element) {
 				// scroll to element
-				element.scrollIntoView();
+				element.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});;
 
 				// set fragmention attribute
 				element.setAttribute('fragmention', '');
