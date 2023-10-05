@@ -3,12 +3,12 @@
   "version": "1.1.3",
   "description": "Fragmentions are anchors to individual words or phrases in a document.",
   "type": "module",
-  "main": "./fragmention.js",
-  "module": "./fragmention.js",
-  "style": "./fragmention.css",
+  "main": "fragmention.js",
+  "module": "fragmention.js",
+  "style": "fragmention.css",
   "exports": {
-    "import": "./fragmention.js",
-    "require": "./fragmention.js"
+    ".": "./fragmention.js",
+    "./fragmention.css": "./fragmention.css"
   },
   "author": "",
   "contributors": [
